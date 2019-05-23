@@ -1,0 +1,200 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: flex-end;
+    font-family: "Roboto", sans-serif;
+    background-color: #9ba6b1;
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      flex-direction: column;
+    }
+  
+    #left #navbar {
+      position: relative;
+      min-width: 100%;
+    }
+  
+    #main-doc {
+      width: 96vw;
+      margin-left: 1vw;
+    }
+  }
+  
+  #left {
+    padding: 1vw;
+    min-width: 25vw;
+    left: 0;
+    display: flex;
+  }
+  
+  #right {
+    width: 72vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    padding-left: 0vw;
+    padding-right: 1vw;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #navbar {
+    position: fixed;
+    width: 25vw;
+    text-align: center;
+    overflow-y: scroll;
+    top: 1vw;
+    bottom: 0vw;
+    padding-bottom: 1vw;
+    font-family: "Josefin Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    background: darkslategray;
+    color: white;
+    border-radius: 10px;
+    padding: 0px 5px 0px 5px;
+  }
+  
+  #navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 10px;
+    background-color: darkslategrey;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+  }
+  
+  #navbar li {
+    padding: 10px;
+    background-color: white;
+  }
+  
+  #navbar li:hover {
+    background-color: #cdd2d8;
+  }
+  
+  #attribution {
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 10px;
+    font-family: "Roboto", sans serif;
+    border-radius: 10px;
+    background: white;
+  }
+  
+  #main-doc {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    background-color: white;
+    border-radius: 10px;
+  }
+  
+  #main-doc ul,
+  #main-doc p {
+    font-size: 0.8rem;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  h2 {
+    border-style: solid;
+    border-width: 0px 0px 0px 5px;
+    padding-left: 5px;
+    border-color: darkslategray;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  
+  h3 {
+    background-color: RGB(82, 114, 138);
+    padding: 10px 0px 10px 10px;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    margin: 30px 0px -10px 0px;
+  }
+  
+  h4 {
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: "Roboto", sans-serif;
+    margin: 30px 0px 10px 0px;
+  }
+  
+  a {
+    color: #107896;
+  }
+  
+  a:hover {
+    color: black;
+  }
+  
+  a:visited {
+    color: #4f4f2f;
+  }
+  
+  .responsive-img {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  code {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .code-block {
+    background-color: lightgrey;
+    padding: 4px 0px 4px 10px;
+    border-radius: 3px 0px 0px 3px;
+    border-style: solid;
+    border-color: orangered;
+    border-width: 0px 0px 0px 4px;
+    font-family: courier;
+    font-weight: bold;
+  }
+  
+  .note {
+    background-color: aliceblue;
+    border-style: solid;
+    border-width: 0px 0px 0px 5px;
+    border-radius: 3px 0px 0px 3px;
+    border-color: darkslategrey;
+    padding: 10px 10px 10px 15px;
+    margin-left: 20px;
+  }
+  
+  .summary-table {
+    margin: 1em auto;
+  }
+  
+  .summary-table th {
+    background: slategrey;
+    padding: 7px;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1rem;
+  }
+  
+  .summary-table,
+  th,
+  td {
+    border: solid 1px lightgrey;
+    border-collapse: collapse;
+    padding: 5px 5px 5px 5px;
+    font-size: 0.8rem;
+  }
