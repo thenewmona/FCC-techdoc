@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto" rel="stylesheet">
@@ -11,1101 +10,238 @@
   <div id="left">
     <nav id="navbar">
       <header class="header">
-        <h1>UNIX Tutorial for Beginners</h1>
+        <h1>Template</h1>
         <div id="intro">
-          <p>A beginners guide to the <strong>Unix</strong> and <strong>Linux</strong> operating system. Eight simple tutorials which cover the basics of UNIX / Linux commands.
-            <p>
+          <p><p>
         </div>
       </header>
-      <ul>
-        <li><a class="nav-link" href="#introduction">Introduction</a></li>
-        <li><a class="nav-link" href="#tutorial_1">Tutorial 1</a></li>
-        <li><a class="nav-link" href="#tutorial_2">Tutorial 2</a></li>
-        <li><a class="nav-link" href="#tutorial_3">Tutorial 3</a></li>
-        <li><a class="nav-link" href="#tutorial_4">Tutorial 4</a></li>
-        <li><a class="nav-link" href="#tutorial_5">Tutorial 5</a></li>
-        <li><a class="nav-link" href="#tutorial_6">Tutorial 6</a></li>
-        <!--
-I may come back and add this later, it's not needed right now
-      <li><a class="nav-link" href="#tutorial_7">Tutorial 7</a></li>
-      <li><a class="nav-link" href="#tutorial_8">Tutorial 8</a></li>
--->
+            <ul>       
+        <li><a class="nav-link" href="#header_1">Header_1</a></li>
+        <li><a class="nav-link" href="#header_2">Header_2</a></li>
+        <li><a class="nav-link" href="#header_3">Header_3</a></li>
+        <li><a class="nav-link" href="#header_4">Header_4</a></li>
+        <li><a class="nav-link" href="#header_5">Header_5</a></li>
+        <li><a class="nav-link" href="#header_6">Header_6</a></li>
       </ul>
       <div id="attribution">
-        <p>All content comes courtesy of <a href="http://www.ee.surrey.ac.uk/Teaching/Unix/">the following tutorial</a>, by Michael Stonebank of the <a href="https://www.surrey.ac.uk/">University of Surrey</a>.</p>
+        <p></p>
 
-        <p>The material is not owned or created by myself, and was used as part of <a href="https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page">freeCodeCamp's Responsive Web Design Certification</a>.</p>
+        <p><a href="https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page">freeCodeCamp's Responsive Web Design Certification</a>.</p>
 
-        <div id="license">
-          <br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/2.0/88x31.png" /></a><br />This work is licensed under a
-          <a
-            rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic License</a>.</div>
+        
       </div>
     </nav>
   </div>
   <div id="right">
     <main id="main-doc">
-
-      <section class="main-section" id="introduction">
+      <section class="main-section" id="header_1">
         <header>
-          <h2>Introduction</h2>
+          <h2>header 1</h2>
         </header>
-        <h3>What is UNIX?</h3>
-        <p>UNIX is an operating system which was first developed in the 1960s, and has been under constant development ever since. By operating system, we mean the suite of programs which make the computer work. It is a stable, multi-user, multi-tasking
-          system for servers, desktops and laptops.
-          <br><br> UNIX systems also have a graphical user interface (GUI) similar to Microsoft Windows which provides an easy to use environment. However, knowledge of UNIX is required for operations which aren't covered by a graphical program, or for
-          when there is no windows interface available, for example, in a telnet session.</p>
-        <h3>Types of UNIX</h3>
-        <p>There are many different versions of UNIX, although they share common similarities. The most popular varieties of UNIX are Sun Solaris, GNU/Linux, and MacOS X.
-          <br><br> Here in the School, we use Solaris on our servers and workstations, and Fedora Linux on the servers and desktop PCs.</p>
-        <h3>The UNIX operating system</h3>
-        <p>The UNIX operating system is made up of three parts; the kernel, the shell and the programs.</p>
-        <h4>The Kernel</h4>
-        <p>The kernel of UNIX is the hub of the operating system: it allocates time and memory to programs and handles the filestore and communications in response to system calls.
-          <br><br> As an illustration of the way that the shell and the kernel work together, suppose a user types <code>rm myfile</code> (which has the effect of removing the file <strong>myfile</strong>). The shell searches the filestore for the file
-          containing the program <code>rm</code>, and then requests the kernel, through system calls, to execute the program <code>rm</code> on <strong>myfile</strong>. When the process <code>rm myfile</code> has finished running, the shell then returns
-          the UNIX prompt % to the user, indicating that it is waiting for further commands.</p>
-        <h4>The Shell</h4>
-        <p>The shell acts as an interface between the user and the kernel. When a user logs in, the login program checks the username and password, and then starts another program called the shell. The shell is a command line interpreter (CLI). It interprets
-          the commands the user types in and arranges for them to be carried out. The commands are themselves programs: when they terminate, the shell gives the user another prompt (% on our systems).
-          <br><br> The adept user can customise his/her own shell, and users can use different shells on the same machine. Staff and students in the school have the tcsh shell by default.
-          <br><br> The <strong>tcsh shell</strong> has certain features to help the user inputting commands.
-          <br><br> Filename Completion - By typing part of the name of a command, filename or directory and pressing the [Tab] key, the tcsh shell will complete the rest of the name automatically. If the shell finds more than one name beginning with those
-          letters you have typed, it will beep, prompting you to type a few more letters before pressing the tab key again.
-          <br><br> History - The shell keeps a list of the commands you have typed in. If you need to repeat a command, use the cursor keys to scroll up and down the list or type history for a list of previous commands.
-          <br>
-          <h3>Files and processes</h3>
-          <p>Everything in UNIX is either a file or a process.
-            <br><br> A process is an executing program identified by a unique PID (process identifier).
-            <br><br> A file is a collection of data. They are created by users using text editors, running compilers etc.
-            <br><br> Examples of files:</p>
-          <ul>
-            <li>a document (report, essay etc.)</li>
-            <li>the text of a program written in some high-level programming language</li>
-            <li>instructions comprehensible directly to the machine and incomprehensible to a casual user, for example, a collection of binary digits (an executable or binary file);</li>
-            <li>a directory, containing information about its contents, which may be a mixture of other directories (subdirectories) and ordinary files.</li>
-          </ul>
-          <h3>The Directory Structure</h3>
-          <p>All the files are grouped together in the directory structure. The file-system is arranged in a hierarchical structure, like an inverted tree. The top of the hierarchy is traditionally called <strong>root</strong> (written as a slash / )
-            <img class="responsive-img" src="http://www.ee.surrey.ac.uk/Teaching/Unix/media/unix-tree.png" alt="unix tree"> In the diagram above, we see that the home directory of the undergraduate student <strong>"ee51vn"</strong> contains two sub-directories
-            (
-            <strong>docs</strong> and <strong>pics</strong>) and a file called <strong>report.doc</strong>.
-            <br><br> The full path to the file <strong>report.doc</strong> is <strong>"/home/its/ug1/ee51vn/report.doc"</strong>
-            <h3>Starting an UNIX terminal</h3>
-            <p>To open an UNIX terminal window, click on the "Terminal" icon from Applications/Accessories menus.</p>
-            <img class="responsive-img" src="http://www.ee.surrey.ac.uk/Teaching/Unix/media/gnome-window.gif" alt="gnome window">
-            <p>An UNIX Terminal window will then appear with a % prompt, waiting for you to start entering commands.</p>
-            <img class="responsive-img" src="http://www.ee.surrey.ac.uk/Teaching/Unix/media/unix-xterm0.gif" alt="unix xterm0"><br>
 
-      </section>
-      <hr>
-      <section class="main-section" id="tutorial_1">
-        <header>
-          <h2>Tutorial 1</h2>
-        </header>
-        <h3>1.1 Listing files and directories</h3>
-        <h4>ls (list)</h4>
-        <p>When you first login, your current working directory is your home directory. Your home directory has the same name as your user-name, for example, <strong>ee91ab</strong>, and it is where your personal files and subdirectories are saved.
-          <br><br> To find out what is in your home directory, type</p>
-        <p class="code-block">% ls</p>
-        <p>The <code>ls</code> command ( lowercase L and lowercase S ) lists the contents of your current working directory.</p>
-        <img class="responsive-img" src="http://www.ee.surrey.ac.uk/Teaching/Unix/media/unix-xterm1.gif" alt="unix xterm1">
-        <p>There may be no files visible in your home directory, in which case, the UNIX prompt will be returned. Alternatively, there may already be some files inserted by the System Administrator when your account was created.
-          <br><br>
-          <code>ls</code> does not, in fact, cause all the files in your home directory to be listed, but only those ones whose name does not begin with a dot (.) Files beginning with a dot (.) are known as hidden files and usually contain important program
-          configuration information. They are hidden because you should not change them unless you are very familiar with UNIX!!!
-          <br><br> To list all files in your home directory including those whose names begin with a dot, type</p>
-        <p class="code-block">% ls -a</p>
-          <p>As you can see, <code>ls -a</code> lists files that are normally hidden.</p>
-          <img class="responsive-img" src="http://www.ee.surrey.ac.uk/Teaching/Unix/media/unix-xterm2.gif" alt="unix xterm2">
-          <p><code>ls</code> is an example of a command which can take options: <strong>-a</strong> is an example of an option. The options change the behaviour of the command. There are online manual pages that tell you which options a particular command
-            can take, and how each option modifies the behaviour of the command. (See later in this tutorial)
+        <h3>header 1</h3>
+        <p class="lorem">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius? 
+          
+        </p>
+
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+      </ul>
+
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
           </p>
-          <h3>1.2 Making Directories</h3>
-          <h4>mkdir (make directory)</h4>
-          <p>We will now make a subdirectory in your home directory to hold the files you will be creating and using in the course of this tutorial. To make a subdirectory called unixstuff in your current working directory type</p>
-
-          <p class="code-block">% mkdir unixstuff</p>
-
-          <p>To see the directory you have just created, type</p>
-
-          <p class="code-block">% ls</p>
-
-          <h3>1.3 Changing to a different directory </h3>
-          <h4>cd (change directory)</h4>
-          <p>The command <code>cd directory</code> means change the current working directory to <em>'directory'</em>. The current working directory may be thought of as the directory you are in, i.e. your current position in the file-system tree.
-            <br><br> To change to the directory you have just made, type</p>
-
-          <p class="code-block">% cd unixstuff</p>
-          <p>
-            Type <code>ls</code> to see the contents (which should be empty)</p>
-
-          <h4>Exercise 1a</h4>
-          <p>Make another directory inside the <strong>unixstuff</strong> directory called <strong>backups</strong>.</p>
-          <h3>1.4 The directories . and ..</h3>
-          <p>Still in the unixstuff directory, type</p>
-
-          <p class="code-block">% ls -a</p>
-
-          <p>As you can see, in the <strong>unixstuff</strong> directory (and in all other directories), there are two special directories called (<strong>.</strong>) and (<strong>..</strong>)
-
-            <h4>The current directory (.)</h4>
-            <p>In UNIX, (<strong>.</strong>) means the current directory, so typing</p>
-
-            <p class="code-block">% cd .</p>
-            <p class="note">NOTE: there is a space between cd and the dot.</p>
-            <p>means stay where you are (the <strong>unixstuff</strong> directory).
-              <br><br> This may not seem very useful at first, but using (<strong>.</strong>) as the name of the current directory will save a lot of typing, as we shall see later in the tutorial.</p>
-
-            <h4>The parent directory (..)</h4>
-            <p>(<strong>..</strong>) means the parent of the current directory, so typing</p>
-
-            <p class="code-block">% cd ..</p>
-
-            <p>will take you one directory up the hierarchy (back to your home directory). Try it now.</p>
-            <p class="note">Note: typing <code>cd</code> with no argument always returns you to your home directory. This is very useful if you are lost in the file system.</p>
-            <h3>1.5 Pathnames</h3>
-            <h4>pwd (print working directory)</h4>
-            <p>Pathnames enable you to work out where you are in relation to the whole file-system. For example, to find out the absolute pathname of your home-directory, type <code>cd</code> to get back to your home-directory and then type</p>
-
-            <p class="code-block">% pwd</p>
-
-              <p>The full pathname will look something like this -</p>
-
-              <p class="code-block">/home/its/ug1/ee51vn</p>
-
-              <p>which means that
-                <strong>ee51vn</strong> (your home directory) is in the sub-directory <strong>ug1</strong> (the group directory),which in turn is located in the <strong>its</strong> sub-directory, which is in the <strong>home</strong> sub-directory, which
-                is in the top-level root directory called " / " .
-                <img class="responsive-img" src="http://www.ee.surrey.ac.uk/Teaching/Unix/media/unix-tree.png" alt="unix file structure">
-                <h4>Exercise 1b</h4>
-                <p>Use the commands <code>cd</code>, <code>ls</code> and <code>pwd</code> to explore the file system.
-                  <br>
-                  <p>(Remember, if you get lost, type <code>cd</code> by itself to return to your home-directory)</p>
-
-                  <h3>1.6 More about home directories and pathnames</h3>
-                  <h4>Understanding pathnames</h4>
-                  <p>First type <code>cd</code> to get back to your home-directory, then type</p>
-
-                  <p class="code-block">% ls unixstuff</p>
-
-                  <p>to list the conents of your unixstuff directory.
-                    <br><br> Now type</p>
-
-                  <p class="code-block">% ls backups</p>
-
-                    <p>You will get a message like this -</p>
-
-                    <p class="code-block">backups: No such file or directory</p>
-
-                    <p>The reason is, backups is not in your current working directory. To use a command on a file (or directory) not in the current working directory (the directory you are currently in), you must either <code>cd</code> to the correct directory,
-                      or specify its full pathname. To list the contents of your backups directory, you must type</p>
-
-                    <p class="code-block">% ls unixstuff/backups</p>
-                    <h4>~ (your home directory)</h4>
-                    <p>Home directories can also be referred to by the tilde <strong>~</strong> character. It can be used to specify paths starting at your home directory. So typing</p>
-
-                    <p class="code-block">% ls ~/unixstuff</p>
-
-                    <p>will list the contents of your unixstuff directory, no matter where you currently are in the file system.
-                      <br><br> What do you think</p>
-
-                    <p class="code-block">% ls ~</p>
-
-                    <p>would list?
-                      <br><br> What do you think</p>
-
-                    <p class="code-block">% ls ~/..</p>
-
-                    <p>would list?</p>
-
-                    <h3>Summary</h3><br>
-                    <table class="summary-table">
-                      <tr>
-                        <th>Command</th>
-                        <th>Meaning</th>
-                      </tr>
-                      <tr>
-                        <td><code>ls</code></td>
-                        <td>list files and directories</td>
-                      </tr>
-                      <tr>
-                        <td><code>ls -a</code></td>
-                        <td>list all files and directories</td>
-                      </tr>
-                      <tr>
-                        <td><code>mkdir</code></td>
-                        <td>make a directory</td>
-                      </tr>
-                      <tr>
-                        <td><code>cd directory</code></td>
-                        <td>change to named directory</td>
-                      </tr>
-                      <tr>
-                        <td><code>cd</code></td>
-                        <td>change to home-directory</td>
-                      </tr>
-                      <tr>
-                        <td><code>cd ~</code></td>
-                        <td>change to home-directory</td>
-                      </tr>
-                      <tr>
-                        <td><code>cd ..</code></td>
-                        <td>change to parent directory</td>
-                      </tr>
-                      <tr>
-                        <td><code>pwd</code></td>
-                        <td>display the path of the current director</td>
-                      </tr>
-                    </table>
-      </section>
-      <hr>
-      <section class="main-section" id="tutorial_2">
-        <header>
-          <h2>Tutorial 2</h2>
-        </header>
-        <h3>2.1 Copying Files</h3>
-        <h4>cp (copy)</h4>
-        <p><code>cp file1 file2</code> is the command which makes a copy of <strong>file1</strong> in the current working directory and calls it <strong>file2</strong>
-          <br><br> What we are going to do now, is to take a file stored in an open access area of the file system, and use the <code>cp</code> command to copy it to your unixstuff directory.
-          <br><br> First, <code>cd</code> to your <strong>unixstuff</strong> directory.</p>
-
-        <p class="code-block">% cd ~/unixstuff</p>
-
-        <p>Then at the UNIX prompt, type,</p>
-
-        <p class="code-block">% cp /vol/ee/ee-info/Teaching/Unix/science.txt .</p>
-
-        <p class="note">Note: Don't forget the dot . at the end. Remember, in UNIX, the dot means the current directory.
-          <p>
-
-            <p>The above command means copy the file <strong>science.txt</strong> to the current directory, keeping the name the same.</p>
-
-            <p class="note">Note: The directory <strong>/vol/ee/ee-info/Teaching/Unix/</strong> is an area to which everyone in the school has read and copy access. If you are from outside the University, you can grab a copy of the file <a href="http://www.ee.surrey.ac.uk/Teaching/Unix/science.txt">here</a>.
-              Use 'File/Save As..' from the menu bar to save it into your unixstuff directory.</p>
-
-            <h4>Exercise 2a</h4>
-            <p>Create a backup of your <strong>science.txt</strong> file by copying it to a file called <strong>science.bak</strong></p>
-
-            <h3>2.2 Moving files</h3>
-            <h4>mv (move)</h4>
-            <p><code>mv file1 file2</code> moves (or renames) <strong>file1</strong> to <strong>file2</strong></p>
-
-            <p>To move a file from one place to another, use the <code>mv</code> command. This has the effect of moving rather than copying the file, so you end up with only one file rather than two.
-              <br><br> It can also be used to rename a file, by moving the file to the same directory, but giving it a different name.
-              <br><br> We are now going to move the file <strong>science.bak</strong> to your backup directory.
-              <br><br> First, change directories to your <strong>unixstuff</strong> directory (can you remember how?). Then, inside the <strong>unixstuff</strong> directory, type</p>
-
-            <p class="code-block">% mv science.bak backups/.</p>
-
-              <p>Type <code>ls</code> and <code>ls backups</code> to see if it has worked.</p>
-
-              <h3>2.3 Removing files and directories</h3>
-              <h4>rm (remove), rmdir (remove directory)</h4>
-              <p>To delete (remove) a file, use the <code>rm</code> command. As an example, we are going to create a copy of the <strong>science.txt</strong> file then delete it.</p>
-
-              <p>Inside your <strong>unixstuff</strong> directory, type</p>
-
-              <p class="code-block">% cp science.txt tempfile.txt
-                <br>% ls
-                <br>% rm tempfile.txt
-                <br>% ls</p>
-
-              <p>You can use the <code>rmdir</code> command to remove a directory (make sure it is empty first). Try to remove the backups directory. You will not be able to since UNIX will not let you remove a non-empty directory.</p>
-
-              <h4>Exercise 2b</h4>
-              <p>Create a directory called <strong>tempstuff</strong> using <code>mkdir</code>, then remove it using the <code>rmdir</code> command.
-
-                <h3>2.4 Displaying the contents of a file on the screen</h3>
-                <h4>clear (clear screen)</h4>
-                <p>Before you start the next section, you may like to clear the terminal window of the previous commands so the output of the following commands can be clearly understood.</p>
-
-                <p>At the prompt, type</p>
-
-                <p class="code-block">% clear</p>
-
-                <p>This will clear all text and leave you with the <code>%</code> prompt at the top of the window.</p>
-
-                <h4>cat (concatenate)</h4>
-                <p>The command <code>cat</code> can be used to display the contents of a file on the screen. Type:</p>
-
-                <p class="code-block">% cat science.txt
-                  <p>
-
-                    <p>As you can see, the file is longer than than the size of the window, so it scrolls past making it unreadable.</p>
-
-                    <h4>less</h4>
-                    <p>The command <code>less</code> writes the contents of a file onto the screen a page at a time. Type</p>
-
-                    <p class="code-block">% less science.txt</p>
-
-                    <p>Press the [<strong>space-bar</strong>] if you want to see another page, and type [<strong>q</strong>] if you want to quit reading. As you can see, <code>less</code> is used in preference to <code>cat</code> for long files.</p>
-
-                    <h4>head</h4>
-                    <p>The head command writes the first ten lines of a file to the screen.</p>
-
-                    <p>First <code>clear</code> the screen then type</p>
-
-                    <p class="code-block">% head science.txt
-                      <p>
-
-                        <p>Then type</p>
-
-                        <p class="code-block">% head -5 science.txt</p>
-
-                        <p>What difference did the <code>-5</code> do to the head command?
-                          <p>
-
-                            <h4>tail</h4>
-                            <p>The tail command writes the last ten lines of a file to the screen.
-                              <p>
-
-                                <p>Clear the screen and type</p>
-
-                                <p class="code-block">% tail science.txt
-                                  <p>
-
-                                    <p>Q. How can you view the last 15 lines of the file?</p>
-
-                                    <h3>2.5 Searching the contents of a file</h3>
-                                    <h4>Simple searching using less</h4>
-                                    <p>Using <code>less</code>, you can search though a text file for a keyword (pattern). For example, to search through <strong>science.txt</strong> for the word <strong>'science'</strong>, type</p>
-
-                                    <p class="code-block">% less science.txt</p>
-
-                                    <p>then, still in <code>less</code>, type a forward slash [<strong>/</strong>] followed by the word to search</p>
-
-                                    <p class="code-block">/science</p>
-
-                                    <p>As you can see, <code>less</code> finds and highlights the keyword. Type [<strong>n</strong>] to search for the next occurrence of the word.</p>
-
-                                    <h4>grep (don't ask why it is called grep)</h4>
-                                    <p><code>grep</code> is one of many standard UNIX utilities. It searches files for specified words or patterns. First clear the screen, then type</p>
-
-                                    <p class="code-block">% grep science science.txt
-                                      <p>
-
-                                        <p>As you can see, <code>grep</code> has printed out each line containg the word <strong>science</strong>.</p>
-
-                                        <p>Or has it ????</p>
-
-                                        <p>Try typing</p>
-
-                                        <p class="code-block">% grep Science science.txt
-                                          <p>
-
-                                            <p>The <code>grep</code> command is case sensitive; it distinguishes between <strong>Science</strong> and <strong>science</strong>.</p>
-
-                                            <p>To ignore upper/lower case distinctions, use the <code>-i</code> option, i.e. type</p>
-
-                                            <p class="code-block">% grep -i science science.txt
-                                              <p>
-
-                                                <p>To search for a phrase or pattern, you must enclose it in single quotes (the apostrophe symbol). For example to search for <strong>spinning top,</strong> type</p>
-
-                                                <p class="code-block">% c grep -i 'spinning top' science.txt</p>
-
-                                                  <p>Some of the other options of <code>grep</code> are:</p>
-
-                                                  <p><code>-v</code> display those lines that do NOT match</p>
-                                                  <p><code>-n</code> precede each matching line with the line number</p>
-                                                  <p><code>-c</code> print only the total count of matched lines</p>
-
-                                                  <p>Try some of them and see the different results. Don't forget, you can use more than one option at a time. For example, the number of lines without the words <strong>science</strong> or <strong>Science</strong>                                                    is</p>
-
-                                                  <p class="code-block">% grep -ivc science science.txt</p>
-
-                                                  <h4>wc (word count)</h4>
-                                                  <p>A handy little utility is the <code>wc</code> command, short for word count. To do a word count on <strong>science.txt</strong>, type</p>
-
-                                                  <p class="code-block">% wc -w science.txt</p>
-
-                                                  <p>To find out how many lines the file has, type</p>
-
-                                                  <p class="code-block">% wc -l science.txt</p>
-                                                  <h3>Summary</h3>
-        <br>                                          <table class="summary-table">
-                                                    <tr>
-                                                      <th>Command</th>
-                                                      <th>Meaning</th>
-                                                    </tr>
-                                                    <tr>
-                                                      <td><code>cp file1 file2</code></td>
-                                                      <td>copy file1 and call it file2</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td><code>mv file1 file2</code></td>
-                                                      <td>move or rename file1 to file2</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td><code>rm file</code></td>
-                                                      <td>remove a file</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td><code>rmdir directory</code></td>
-                                                      <td>remove a directory</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td><code>cat file</code></td>
-                                                      <td>display a file</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td><code>less file</code></td>
-                                                      <td>display a file a page at a time</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td><code>head file</code></td>
-                                                      <td>display the first few lines of a file</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td><code>tail file</code></td>
-                                                      <td>display the last few lines of a file</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td><code>grep 'keyword'file</code></td>
-                                                      <td>search a file for keywords</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td><code>wc file</code></td>
-                                                      <td>count number of lines/words/characters in file</td>
-                                                    </tr>
-                                                  </table>
-
-      </section>
-      <hr>
-      <section class="main-section" id="tutorial_3">
-        <header>
-          <h2>Tutorial 3</h2>
-        </header>
-        <h3>3.1 Redirection</h3>
-        <p>Most processes initiated by UNIX commands write to the standard output (that is, they write to the terminal screen), and many take their input from the standard input (that is, they read it from the keyboard). There is also the standard error,
-          where processes write their error messages, by default, to the terminal screen.</p>
-
-        <p>We have already seen one use of the cat command to write the contents of a file to the screen.</p>
-
-        <p>Now type cat without specifing a file to read</p>
-
-        <p class="code-block">% cat</p>
-
-        <p>Then type a few words on the keyboard and press the [<strong>Return</strong>] key.</p>
-
-        <p>Finally hold the [<strong>Ctrl</strong>] key down and press [<strong>d</strong>] (written as <strong>^D</strong> for short) to end the input.</p>
-
-        <p>What has happened?</p>
-
-        <p>If you run the <code>cat</code> command without specifing a file to read, it reads the standard input (the keyboard), and on receiving the 'end of file' (<strong>^D</strong>), copies it to the standard output (the screen).</p>
-
-        <p>In UNIX, we can redirect both the input and the output of commands.</p>
-
-        <h3>3.2 Redirecting the Output</h3>
-        <p>We use the &gt; symbol to redirect the output of a command. For example, to create a file called <strong>list1</strong> containing a list of fruit, type</p>
-        <p class="code-block">% cat &gt; list1</p>
-
-        <p>Then type in the names of some fruit. Press [<strong>Return</strong>] after each one.</p>
-
-        <p class="code-block">pear
-          <br>banana
-          <br>apple
-          <br>^D {this means press [Ctrl] and [d] to stop}</p>
-
-        <p>What happens is the <code>cat</code> command reads the standard input (the keyboard) and the &gt; redirects the output, which normally goes to the screen, into a file called <strong>list1</strong></p>
-
-        <p>To read the contents of the file, type</p>
-
-        <p class="code-block">% cat list1</p>
-
-        <h4>Exercise 3a</h4>
-        <p>Using the above method, create another file called <strong>list2</strong> containing the following fruit: orange, plum, mango, grapefruit. Read the contents of <strong>list2</strong>
-
-          <h4>3.2.1 Appending to a file</h4>
-          <p>The form &gt;&gt; appends standard output to a file. So to add more items to the file <strong>list1</strong>, type</p>
-
-          <p class="code-block">% cat &gt;&gt; list1</p>
-
-          <p>Then type in the names of more fruit</p>
-
-          <p class="code-block">peach
-            <br>grape
-            <br>orange
-            <br>^D (Control D to stop)</p>
-
-          <p>To read the contents of the file, type</p>
-
-          <p class="code-block">% cat list1</p>
-
-          <p>You should now have two files. One contains six fruit, the other contains four fruit.</p>
-
-          <p>We will now use the <code>cat</code> command to join (concatenate) <strong>list1</strong> and <strong>list2</strong> into a new file called <strong>biglist</strong>. Type</p>
-
-          <p class="code-block">% cat list1 list2 &gt; biglist</p>
-
-          <p>What this is doing is reading the contents of <strong>list1</strong> and <strong>list2</strong> in turn, then outputing the text to the file biglist</p>
-
-          <p>To read the contents of the new file, type</p>
-
-          <p class="code-block">% cat biglist</p>
-
-          <h4>3.3 Redirecting the Input</h4>
-          <p>We use the
-            < symbol to redirect the input of a command.</p>
-
-              <p>The command <code>sort</code> alphabetically or numerically sorts a list. Type</p>
-
-              <p class="code-block">% sort</p>
-
-              <p>Then type in the names of some animals. Press [<strong>Return</strong>] after each one.</p>
-
-              <p class="code-block">dog
-                <br>cat
-                <br>bird
-                <br>ape
-                <br>^D (control d to stop)</p>
-
-              <p>The output will be</p>
-
-              <p class="code-block">ape
-                <br>bird
-                <br>cat
-                <br>dog</p>
-
-              <p>Using
-                < you can redirect the input to come from a file rather than the keyboard. For example, to sort the list of fruit, type</p>
-
-                  <p class="code-block">% sort
-                    < biglist</p>
-
-                      <p>and the sorted list will be output to the screen.</p>
-
-                      <p>To output the sorted list to a file, type,</p>
-
-                      <p class="code-block">% sort
-                        < biglist> slist</p>
-
-                      <p>Use <code>cat</code> to read the contents of the file <strong>slist</strong>.
-
-                        <h4>3.4 Pipes</h4>
-                        <p>To see who is on the system with you, type</p>
-
-                        <p class="code-block">% who</p>
-
-                        <p>One method to get a sorted list of names is to type,</p>
-
-                        <p class="code-block">% who &gt; names.txt
-                          <br>% sort
-                          < names.txt</p>
-
-                            <p>This is a bit slow and you have to remember to remove the temporary file called names when you have finished. What you really want to do is connect the output of the who command directly to the input of the sort command. This
-                              is exactly what pipes do. The symbol for a pipe is the vertical bar |</p>
-
-                            <p>For example, typing</p>
-
-                            <p class="code-block">% who | sort</p>
-
-                            <p>will give the same result as above, but quicker and cleaner.</p>
-
-                            <p>To find out how many users are logged on, type</p>
-
-                            <p class="code-block">% who | wc -l</p>
-
-                            <h4>Exercise 3b</h4>
-                            <p>Using pipes, display all lines of <strong>list1</strong> and <strong>list2</strong> containing the letter 'p', and sort the result.
-
-                              <h4>Answer</h4>
-                              <p class="code-block">% cat list1 list2 | grep p | sort</p>
-
-                              <h3>Summary</h3>
-                              <br><table class="summary-table">
-                                <tr>
-                                  <th>Command</th>
-                                  <th>Meaning</th>
-                                </tr>
-                                <tr>
-                                  <td><code>command > file</code></td>
-                                  <td>redirect standard output to a file</td>
-                                </tr>
-                                <tr>
-                                  <td><code>command &gt; file</code></td>
-                                  <td>append standard output to a file</td>
-                                </tr>
-                                <tr>
-                                  <td><code>command < file</code></td>
-                                  <td>redirect standard input from a file</td>
-                                </tr>
-                                <tr>
-                                  <td><code>command1 | command2</code></td>
-                                  <td>pipe the output of command1 to the input of command2</td>
-                                </tr>
-                                <tr>
-                                  <td><code>cat file1 file2 &gt; file0</code></td>
-                                  <td>concatenate file1 and file2 to file0</td>
-                                </tr>
-                                <tr>
-                                  <td><code>sort</code></td>
-                                  <td>sort data</td>
-                                </tr>
-                                <tr>
-                                  <td><code>who</code></td>
-                                  <td>list users currently logged in</td>
-                                </tr>
-                              </table>
-      </section>
-      <hr>
-      <section class="main-section" id="tutorial_4">
-        <header>
-          <h2>Tutorial 4</h2>
-        </header>
-        <h3>4.1 Wildcards</h3>
-        <h4>The * wildcard</h4>
-        <p>The character <strong>*</strong> is called a wildcard, and will match against none or more character(s) in a file (or directory) name. For example, in your <strong>unixstuff</strong> directory, type</p>
-
-        <p class="code-block">% ls list*</p>
-
-        <p>This will list all files in the current directory starting with <strong>list....</strong></p>
-
-        <p>Try typing</p>
-
-        <p class="code-block">% ls *list</p>
-
-        <p>This will list all files in the current directory ending with <strong>....list</strong></p>
-
-        <h4>The ? wildcard</h4>
-        <p>The character <strong>?</strong> will match exactly one character. So <strong>?ouse</strong> will match files like <strong>house</strong> and <strong>mouse</strong>, but not <strong>grouse</strong>. Try typing</p>
-
-        <p class="code-block">% ls ?list</p>
-
-        <h3>4.2 Filename conventions</h3>
-        <p>We should note here that a directory is merely a special type of file. So the rules and conventions for naming files apply also to directories.</p>
-
-        <p>In naming files, characters with special meanings such as <strong>/ * & %</strong>, should be avoided. Also, avoid using spaces within names. The safest way to name a file is to use only alphanumeric characters, that is, letters and numbers, together
-          with _ (underscore) and . (dot).</p>
-        <table class="summary-table">
-          <tr>
-            <th>Good filenames</th>
-            <th>Bad filenames</th>
-          </tr>
-          <tr>
-            <td>project.txt</td>
-            <td>project</td>
-          </tr>
-          <tr>
-            <td>my_big_program.c</td>
-            <td>my big program.c</td>
-          </tr>
-          <tr>
-            <td>fred_dave.doc</td>
-            <td>fred & dave.doc</td>
-          </tr>
-        </table>
-        <p>File names conventionally start with a lower-case letter, and may end with a dot followed by a group of letters indicating the contents of the file. For example, all files consisting of C code may be named with the ending <strong>.c</strong>,
-          for example, <strong>prog1.c</strong> . Then in order to list all files containing C code in your home directory, you need only type <code>ls *.c</code> in that directory.</p>
-
-        <h3>4.3 Getting Help</h3>
-        <h4>On-line Manuals</h4>
-        <p>There are on-line manuals which gives information about most commands. The manual pages tell you which options a particular command can take, and how each option modifies the behaviour of the command. Type <code>man command</code> to read the
-          manual page for a particular command.</p>
-
-        <p>For example, to find out more about the <code>wc</code> (word count) command, type</p< <p class="code-block">% man wc</p>
-
-        <p>Alternatively</p>
-
-        <p class="code-block">% whatis wc</p>
-
-        <p>gives a one-line description of the command, but omits any information about options etc.</p>
-
-        <h4>Apropos</h4>
-        <p>When you are not sure of the exact name of a command,</p>
-
-        <p class="code-block">% apropos keyword</p>
-
-        <p>will give you the commands with keyword in their manual page header. For example, try typing</p>
-
-        <p class="code-block">% apropos copy</p>
-
-        <h3>Summary</h3><br>
-        <table class="summary-table">
-          <tr>
-            <th>Command</th>
-            <th>Meaning</th>
-          </tr>
-          <tr>
-            <td><code>*</code></td>
-            <td>match any number of characters</td>
-          </tr>
-          <tr>
-            <td><code>?</code></td>
-            <td>match one character</td>
-          </tr>
-          <tr>
-            <td><code>man command</code></td>
-            <td>read the online manual page for a command</td>
-          </tr>
-          <tr>
-            <td><code>whatis command</code></td>
-            <td>brief description of a command</td>
-          </tr>
-          <tr>
-            <td><code>apropos keyword</code></td>
-            <td>match commands with keyword in their man pages</td>
-          </tr>
-        </table>
-      </section>
-      <hr>
-      <section class="main-section" id="tutorial_5">
-        <header>
-          <h2>Tutorial 5</h2>
-        </header>
-        <h3>5.1 File system security (access rights)</h3>
-        <p>In your unixstuff directory, type</p>
-
-        <p class="code-block">% ls -l (l for long listing!)</p>
-
-        <p>You will see that you now get lots of details about the contents of your directory, similar to the example below.</p>
-
-        <img class="responsive-img" src="http://www.ee.surrey.ac.uk/Teaching/Unix/file1.gif" alt="file example">
-        <p>Each file (and directory) has associated access rights, which may be found by typing <code>ls -l</code>. Also, <code>ls -lg</code> gives additional information as to which group owns the file (beng95 in the following example):</p>
-
-        <p class="code-block">-rwxrw-r-- 1 ee51ab beng95 2450 Sept29 11:52 file1</p>
-
-        <p>In the left-hand column is a 10 symbol string consisting of the symbols d, r, w, x, -, and, occasionally, s or S. If d is present, it will be at the left hand end of the string, and indicates a directory: otherwise - will be the starting symbol
-          of the string.</p>
-
-        <p>The 9 remaining symbols indicate the permissions, or access rights, and are taken as three groups of 3.</p>
-        <ul>
-          <li>The left group of 3 gives the file permissions for the user that owns the file (or directory) (ee51ab in the above example);
-            <li>
-              <li>the middle group gives the permissions for the group of people to whom the file (or directory) belongs (eebeng95 in the above example); the rightmost group gives the permissions for all others.</li>
-              <li>The symbols r, w, etc., have slightly different meanings depending on whether they refer to a simple file or to a directory.</li>
-        </ul>
-        <h4>Access rights on files.</h4>
-        <ul>
-          <li>r (or -), indicates read permission (or otherwise), that is, the presence or absence of permission to read and copy the file </li>
-          <li>w (or -), indicates write permission (or otherwise), that is, the permission (or otherwise) to change a file </li>
-          <li>x (or -), indicates execution permission (or otherwise), that is, the permission to execute a file, where appropriate</li>
-        </ul>
-        <h4>Access rights on directories.</h4>
-        <ul>
-          <li>r allows users to list files in the directory;</li>
-          <li>w means that users may delete files from the directory or move files into it;</li>
-          <li>x means the right to access files in the directory. This implies that you may read files in the directory provided you have read permission on the individual files.</li>
-        </ul>
-        <p>So, in order to read a file, you must have execute permission on the directory containing that file, and hence on any directory containing that directory as a subdirectory, and so on, up the tree.</p>
-
-        <h4>Some examples</h4>
-        <p><strong>-rwxrwxrwx</strong> a file that everyone can read, write and execute (and delete).</p>
-        <p><strong>-rw-------</strong> a file that only the owner can read and write - no-one else can read or write and no-one has execution rights (e.g. your mailbox file).</p>
-        <h3>5.2 Changing access rights</h3>
-        <h4>chmod (changing a file mode)</h4>
-        <p>Only the owner of a file can use chmod to change the permissions of a file. The options of chmod are as follows</p>
-        <table class="summary-table">
-          <tr>
-            <th>Symbol</th>
-            <th>Meaning</th>
-            <tr>
-              <tr>
-                <td>u</td>
-                <td>user</td>
-              </tr>
-              <tr>
-                <td>g</td>
-                <td>group</td>
-              </tr>
-              <tr>
-                <td>o</td>
-                <td>other</td>
-              </tr>
-              <tr>
-                <td>a</td>
-                <td>all</td>
-              </tr>
-              <tr>
-                <td>r</td>
-                <td>read</td>
-              </tr>
-              <tr>
-                <td>w</td>
-                <td>write (and delete)</td>
-              </tr>
-              <tr>
-                <td>x</td>
-                <td>execute (and access directory)</td>
-              </tr>
-              <tr>
-                <td>+</td>
-                <td>add permission</td>
-              </tr>
-              <tr>
-                <td>-</td>
-                <td>take away permission</td>
-              </tr>
-        </table>
-        <p>For example, to remove read write and execute permissions on the file <strong>biglist</strong> for the group and others, type</p>
-
-        <p class="code-block">% chmod go-rwx biglist</p>
-
-        <p>This will leave the other permissions unaffected.</p>
-
-        <p>To give read and write permissions on the file <strong>biglist</strong> to all,</p>
-
-        <p class="code-block">% chmod a+rw biglist</p>
-
-        <h4>Exercise 5a</h4>
-        <p>Try changing access permissions on the file <strong>science.txt</strong> and on the directory backups</p>
-
-        <p>Use <code>ls -l</code> to check that the permissions have changed.</p>
-
-        <h3>5.3 Processes and Jobs</h3>
-        <p>A process is an executing program identified by a unique PID (process identifier). To see information about your processes, with their associated PID and status, type</p>
-
-        <p class="code-block">% ps</p>
-
-        <p>A process may be in the foreground, in the background, or be suspended. In general the shell does not return the UNIX prompt until the current process has finished executing.</p>
-
-        <p>Some processes take a long time to run and hold up the terminal. Backgrounding a long process has the effect that the UNIX prompt is returned immediately, and other tasks can be carried out while the original process continues executing.</p>
-
-        <h4>Running background processes</h4>
-        <p>To background a process, type an <code>&</code> at the end of the command line. For example, the command <code>sleep</code> waits a given number of seconds before continuing. Type</p>
-
-        <p class="code-block">% sleep 10</p>
-
-        <p>This will wait 10 seconds before returning the command prompt <code>%</code>. Until the command prompt is returned, you can do nothing except wait.</p>
-
-        <p>To run sleep in the background, type</p>
-
-        <p class="code-block">% sleep 10 &</p>
-
-        <p class="code-block">[1] 6259</p>
-
-        <p>The <code>&</code> runs the job in the background and returns the prompt straight away, allowing you do run other programs while waiting for that one to finish.</p>
-
-        <p>The first line in the above example is typed in by the user; the next line, indicating job number and PID, is returned by the machine. The user is be notified of a job number (numbered from 1) enclosed in square brackets, together with a PID and
-          is notified when a background process is finished. Backgrounding is useful for jobs which will take a long time to complete.</p>
-
-        <h4>Backgrounding a current foreground process</h4>
-        <p>At the prompt, type</p>
-
-        <p class="code-block">% sleep 1000</p>
-
-        <p>You can suspend the process running in the foreground by typing <strong>^Z</strong>, i.e.hold down the [<strong>Ctrl</strong>] key and type [<strong>z</strong>]. Then to put it in the background, type</p>
-
-        <p class="code-block">% bg</p>
-
-        <p class="note">Note: do not background programs that require user interaction e.g. vi</p>
-
-        <h3>5.4 Listing suspended and background processes</h3>
-        <p>When a process is running, backgrounded or suspended, it will be entered onto a list along with a job number. To examine this list, type</p>
-
-        <p class="code-block">% jobs</p>
-
-        <p>An example of a job list could be</p>
-
-        <p class="code-block">[1] Suspended sleep 1000
-          <br>[2] Running netscape
-          <br>[3] Running matlab</p>
-
-        <p>To restart (foreground) a suspended processes, type</p>
-
-        <p class="code-block">% fg %jobnumber</p>
-
-        <p>For example, to restart sleep 1000, type</p>
-
-        <p class="code-block">% fg %1</p>
-
-        <p>Typing <code>fg</code> with no job number foregrounds the last suspended process.</p>
-
-        <h3>5.5 Killing a process</h3>
-        <h4>kill (terminate or signal a process)</h4>
-        <p>It is sometimes necessary to kill a process (for example, when an executing program is in an infinite loop)</p>
-
-        <p>To kill a job running in the foreground, type <strong>^C</strong> (control c). For example, run</p>
-
-        <p class="code-block">% sleep 100
-          <br>^C</p>
-
-        <p>To kill a suspended or background process, type</p>
-
-        <p class="code-block">% kill %jobnumber</p>
-
-        <p>For example, run</p>
-
-        <p class="code-block">% sleep 100 &
-          <br>% jobs</p>
-
-        <p>If it is job number 4, type</p>
-
-        <p class="code-block">% kill %4</p>
-
-        <p>To check whether this has worked, examine the job list again to see if the process has been removed.</p>
-
-        <h4>ps (process status)</h4>
-        <p>Alternatively, processes can be killed by finding their process numbers (PIDs) and using kill PID_number</p>
-
-        <p class="code-block">% sleep 1000 &
-          <br>% ps</p>
-
-        <p class="code-block">PID TT S TIME COMMAND
-          <br>20077 pts/5 S 0:05 sleep 1000
-          <br>21563 pts/5 T 0:00 netscape
-          <br>21873 pts/5 S 0:25 nedit</p>
-
-        <p>To kill off the process <strong>sleep 1000</strong>, type</p>
-
-        <p class="code-block">% kill 20077</p>
-
-        <p>and then type <code>ps</code> again to see if it has been removed from the list.</p>
-
-        <p>If a process refuses to be killed, uses the <strong>-9</strong> option, i.e. type,</p>
-
-        <p class="code-block">% kill -9 20077</p>
-
-        <p>Note: It is not possible to kill off other users' processes !!!</p>
-
-        <h3>Summary</h3><br>
-        <table class="summary-table">
-          <tr>
-            <th>Command</th>
-            <th>Meaning</th>
-          </tr>
-          <tr>
-            <td><code>ls -lag</code></td>
-            <td>list access rights for all files</td>
-          </tr>
-          <tr>
-            <td><code>chmod [options] file</code></td>
-            <td>change access rights for named file</td>
-          </tr>
-          <tr>
-            <td><code>command &</code></td>
-            <td>run command in background</td>
-          </tr>
-          <tr>
-            <td><code>^C</code></td>
-            <td> kill the job running in the foreground</td>
-          </tr>
-          <tr>
-            <td><code>^Z</code></td>
-            <td> suspend the job running in the foreground</td>
-          </tr>
-          <tr>
-            <td><code>bg</code></td>
-            <td> background the suspended job</td>
-          </tr>
-          <tr>
-            <td><code>jobs</code></td>
-            <td> list current jobs</td>
-          </tr>
-          <tr>
-            <td><code>fg %1</code></td>
-            <td> foreground job number 1</td>
-          </tr>
-          <tr>
-            <td><code>kill %1</code></td>
-            <td> kill job number 1</td>
-          </tr>
-          <tr>
-            <td><code>ps</code></td>
-            <td> list current processes</td>
-          </tr>
-          <tr>
-            <td><code>kill 26152</code></td>
-            <td> kill process number 26152</td>
-          </tr>
-        </table>
-      </section>
-      <hr>
-      <section class="main-section" id="tutorial_6">
-        <header>
-          <h2>Tutorial 6</h2>
-        </header>
-        <h3>Other useful UNIX commands</h3>
-        <h4>quota</h4>
-        <p>All students are allocated a certain amount of disk space on the file system for their personal files, usually about 100Mb. If you go over your quota, you are given 7 days to remove excess files.</p>
-
-        <p>To check your current quota and how much of it you have used, type</p>
-
-        <p class="code-block">% quota -v</p>
-
-        <h4>df</h4>
-        <p>The <code>df</code> command reports on the space left on the file system. For example, to find out how much space is left on the fileserver, type</p>
-
-        <p class="code-block">% df .</p>
-
-        <h4>du</h4>
-        <p>The <code>du</code> command outputs the number of kilobyes used by each subdirectory. Useful if you have gone over quota and you want to find out which directory has the most files. In your home-directory, type</p>
-
-        <p class="code-block">% du -s *</p>
-
-        <p>The <strong>-s</strong> flag will display only a summary (total size) and the * means all files and directories.</p>
-
-        <h4>gzip</h4>
-        <p>This reduces the size of a file, thus freeing valuable disk space. For example, type</p>
-
-        <p class="code-block">% ls -l science.txt</p>
-
-        <p>and note the size of the file using <code>ls -l</code> . Then to compress science.txt, type</p>
-
-        <p class="code-block">% gzip science.txt</p>
-
-        <p>This will compress the file and place it in a file called <strong>science.txt.gz</strong></p>
-
-        <p>To see the change in size, type <code>ls -l</code> again.</p>
-
-        <p>To expand the file, use the <code>gunzip</code> command.</p>
-
-        <p class="code-block">% gunzip science.txt.gz</p>
-
-        <h4>zcat</h4>
-        <p><code>zcat</code> will read gzipped files without needing to uncompress them first.</p>
-
-        <p class="code-block">% zcat science.txt.gz</p>
-
-        <p>If the text scrolls too fast for you, pipe the output though <code>less</code> .</p>
-
-        <p class="code-block">% zcat science.txt.gz | less</p>
-
-        <h4>file</h4>
-        <p><code>file</code> classifies the named files according to the type of data they contain, for example ascii (text), pictures, compressed data, etc.. To report on all files in your home directory, type</p>
-
-        <p class="code-block">% file *</p>
-
-        <h4>diff</h4>
-        <p>This command compares the contents of two files and displays the differences. Suppose you have a file called <strong>file1</strong> and you edit some part of it and save it as <strong>file2</strong>. To see the differences type</p>
-
-        <p class="code-block">% diff file1 file2</p>
-
-        <p>Lines beginning with a <strong>&lt;</strong> denotes file1, while lines beginning with a <strong>&gt;</strong> denotes file2.</p>
-
-        <h4>find</h4>
-        <p>This searches through the directories for files and directories with a given name, date, size, or any other attribute you care to specify. It is a simple command but with many options - you can read the manual by typing <code>man find</code> .</p>
-
-        <p>To search for all fies with the extention <strong>.txt</strong>, starting at the current directory (.) and working through all sub-directories, then printing the name of the file to the screen, type</p>
-
-        <p class="code-block">% find . -name "*.txt" -print</p>
-
-        <p>To find files over 1Mb in size, and display the result as a long listing, type</p>
-
-        <p class="code-block">% find . -size +1M -ls</p>
-
-        <h4>history</h4>
-        <p>The C shell keeps an ordered list of all the commands that you have entered. Each command is given a number according to the order it was entered.</p>
-
-        <p class="code-block">% history (show command history list)</p>
-
-        <p>If you are using the C shell, you can use the exclamation character (<strong>!</strong>) to recall commands easily.</p>
-
-        <p class="code-block">% !! (recall last command)</p>
-
-        <p class="code-block">% !-3 (recall third most recent command)</p>
-
-        <p class="code-block">% !5 (recall 5th command in list)</p>
-
-        <p class="code-block">% !grep (recall last command starting with grep)</p>
-
-        <p>You can increase the size of the history buffer by typing</p>
-
-        <p class="code-block">% set history=100</p>
-      </section>
-      <hr>
-
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
+          </p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
+      </p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
+     </p>
+
+     <code>new WOW().init();
+      $(document).ready(function() {
+      $('.timeline-item').not(":first").addClass('wow fadeInUp').attr('data-wow-duration',
+      '1.35s').attr('data-wow-delay', '.25s');
+      });</code> 
+  <code>new WOW().init();
+      $(document).ready(function() {
+      $('.timeline-item').not(":first").addClass('wow fadeInUp').attr('data-wow-duration',
+      '1.35s').attr('data-wow-delay', '.25s');
+      });</code>
+
+     <section class="main-section" id="header_2">
+      <header> 
+        <h2>header 2</h2>
+      </header>
+      <h3>header 2</h3>
+        <p class="lorem">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?   
+        </p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
+          </p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
+          </p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
+      </p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
+     </p>
+
+     <code>new WOW().init();
+      $(document).ready(function() {
+      $('.timeline-item').not(":first").addClass('wow fadeInUp').attr('data-wow-duration',
+      '1.35s').attr('data-wow-delay', '.25s');
+      });</code> 
+  <code>new WOW().init();
+      $(document).ready(function() {
+      $('.timeline-item').not(":first").addClass('wow fadeInUp').attr('data-wow-duration',
+      '1.35s').attr('data-wow-delay', '.25s');
+      });</code>
+
+     <section class="main-section" id="header_3">
+      <header> <h2>header 3</h2>
+      </header>
+      <h3>header 3 </h3>
+
+        <p class="lorem">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?   
+        </p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
+          </p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
+          </p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
+      </p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
+     </p>
+     <code>new WOW().init();
+      $(document).ready(function() {
+      $('.timeline-item').not(":first").addClass('wow fadeInUp').attr('data-wow-duration',
+      '1.35s').attr('data-wow-delay', '.25s');
+      });</code> -->
+  <code>new WOW().init();
+      $(document).ready(function() {
+      $('.timeline-item').not(":first").addClass('wow fadeInUp').attr('data-wow-duration',
+      '1.35s').attr('data-wow-delay', '.25s');
+      });</code>
+
+    <section class="main-section" id="header_4">
+      <header> <h2>header 4</h2>
+      </header>
+      <h3>header 4 </h3>
+
+        <p class="lorem">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?   
+        </p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
+          </p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
+          </p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
+      </p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
+     </p>
+
+
+     <section class="main-section" id="header_5">
+      <header> <h2>header 5</h2>
+      </header>
+      <h3>header 5 </h3>
+        <p class="lorem">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?   
+        </p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
+          </p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
+          </p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
+      </p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
+     </p>
+
+     <section class="main-section" id="header_6">
+      <header> <h2>header 6</h2>
+      </header>
+      <h3>header 6 </h3>
+
+        <p class="lorem">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?   
+        </p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
+          </p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
+          </p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
+      </p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
+          consequuntur harum! Omnis libero ea amet eveniet laborum laudantium. 
+          Officiis nesciunt fuga temporibus laudantium est quia illo totam obcaecati? Quos, eius?
+     </p>
+
+
+        
+      <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
       <!--
 I may come back and add this later, it's not needed right now
     <section class="main-section" id="tutorial_7">
