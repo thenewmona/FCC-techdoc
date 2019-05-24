@@ -1,11 +1,11 @@
-/* https://github.com/DafyddLlyr/fcc_technical_documentation_page */
+
 body {
     margin: 0px;
     padding: 0px;
     display: flex;
     justify-content: flex-end;
     font-family: "Roboto", sans-serif;
-    background-color: #9ba6b1;
+    background-color: #e0e8f0;
   }
   
   @media (max-width: 768px) {
@@ -55,10 +55,10 @@ body {
   }
   
   .header {
-    background: darkslategray;
+    background: rgb(7, 47, 99);
     color: white;
     border-radius: 10px;
-    padding: 0px 5px 0px 5px;
+    padding: 0px 3px 0px 3px;
   }
   
   #navbar ul {
@@ -70,18 +70,18 @@ body {
     padding-bottom: 10px;
     padding-top: 10px;
     border-radius: 10px;
-    background-color: darkslategrey;
+    background-color: rgb(7, 40, 112);
     margin-top: 1vw;
     margin-bottom: 1vw;
   }
   
   #navbar li {
     padding: 10px;
-    background-color: white;
+    background-color: rgb(207, 218, 238);
   }
   
   #navbar li:hover {
-    background-color: #cdd2d8;
+    background-color: #5482e6;
   }
   
   #attribution {
@@ -109,16 +109,18 @@ body {
     text-align: center;
   }
   
-  h2 {
-    border-style: solid;
+  h2 {    
     border-width: 0px 0px 0px 5px;
+    background-color: rgb(26, 66, 129);
+    padding: 25px 0px 15px 25px;
     padding-left: 5px;
-    border-color: darkslategray;
+    border-color: rgb(18, 80, 214);
     font-family: "Josefin Sans", sans-serif;
+    text-align: center;
   }
   
   h3 {
-    background-color: RGB(82, 114, 138);
+    background-color: rgb(67, 103, 161);
     padding: 10px 0px 10px 10px;
     color: white;
     font-family: "Josefin Sans", sans-serif;
@@ -137,11 +139,11 @@ body {
   }
   
   a:hover {
-    color: black;
+    color: rgb(87, 92, 165);
   }
   
   a:visited {
-    color: #4f4f2f;
+    color: #4b2f4f;
   }
   
   .responsive-img {
@@ -154,48 +156,18 @@ body {
   }
   
   code {
-    font-weight: bold;
-    font-size: 1rem;
-  }
+    background-color: rgb(180, 195, 214);
+    display: block;
+    padding: 20px;
+}
+#notes {
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 10px;
+  font-family: "Roboto", sans serif;
+  border-radius: 10px;
+  background: rgb(152, 176, 207);
+}
   
-  .code-block {
-    background-color: lightgrey;
-    padding: 4px 0px 4px 10px;
-    border-radius: 3px 0px 0px 3px;
-    border-style: solid;
-    border-color: orangered;
-    border-width: 0px 0px 0px 4px;
-    font-family: courier;
-    font-weight: bold;
-  }
   
-  .note {
-    background-color: aliceblue;
-    border-style: solid;
-    border-width: 0px 0px 0px 5px;
-    border-radius: 3px 0px 0px 3px;
-    border-color: darkslategrey;
-    padding: 10px 10px 10px 15px;
-    margin-left: 20px;
-  }
   
-  .summary-table {
-    margin: 1em auto;
-  }
-  
-  .summary-table th {
-    background: slategrey;
-    padding: 7px;
-    color: white;
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 1rem;
-  }
-  
-  .summary-table,
-  th,
-  td {
-    border: solid 1px lightgrey;
-    border-collapse: collapse;
-    padding: 5px 5px 5px 5px;
-    font-size: 0.8rem;
-  }
