@@ -1,8 +1,8 @@
-##FreeCodeCamp Responsive Web Design Projects
+## FreeCodeCamp Responsive Web Design Projects
 
 An example of a technical documentation page, build for freeCodeCamp's "Responsive Web Design Certification". 
 
-The page was built to meet the following user stories -
+
 
 **User Story #1**: I can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation).
 
