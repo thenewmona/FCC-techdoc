@@ -136,12 +136,6 @@ body {
     color: #107896;
   }
   
-  code {
-    background-color: gray;
-    display: block;
-    padding: 20px;
-}
-
   a:hover {
     color: black;
   }
